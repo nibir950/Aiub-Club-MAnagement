@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | AIUB Campus Clubs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <p><strong>AIUB</strong></p>
+            <span>Campus Clubs</span>
+        </div>
+        <div class="sidebar-divider"></div>
+
+        <span class="sidebar-nav">
+            <a class="nav-link" href="#clubs">Manage clubs</a>
+            <a class="nav-link" href="#presidents">Club presidents</a>
+            <a class="nav-link" href="#events">Manage events</a>
+            <a class="nav-link" href="#posts">Post moderation</a>
+        </span>
+
+        <div class="sidebar-bottom">
+            <strong>Administrator</strong>
+            <span>Campus management</span>
+            <small>AIUB - Admin portal</small>
+        </div>
+    </div>
+
+    <div class="main-content">
+      
+            <div>
+                <h1>Admin dashboard</h1>
+                <p>Welcome to the AIUB Campus Club Management System.</p>
+                <p>Here you can manage clubs, events, and public posts.</p>
+            </div>
+       
+
+        <div class="stats-grid">
+            <div  class="stat-card">
+                <p>Total clubs</p>
+                <strong id="total-clubs">04</strong>
+                <span id="club-summary">3 active - 1 inactive</span>
+            </div>
+            <div  class="stat-card">
+                <p>Club presidents</p>
+                <strong id="total-presidents">03</strong>
+                <span id="president-summary">1 club needs a president</span>
+            </div>
+            <div  class="stat-card">
+                <p>Upcoming events</p>
+                <strong id="total-events">03</strong>
+                <span id="event-summary">Across 3 campus clubs</span>
+            </div>
+            <div  class="stat-card">
+                <p>Posts to review</p>
+                <strong id="total-pending-posts">02</strong>
+                <span>Awaiting moderation</span>
+            </div>
+        </div>
+
+        <div class="content-card" id="clubs">
+            <div class="card-heading">
+                <div>
+                    <h2>Manage clubs</h2>
+                </div>
+                <button class="primary-button" id="create-club" type="button">+ Create club</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Club name</th>
+                            <th>Club ID</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="clubs-table"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="content-card" id="presidents">
+            <div class="card-heading">
+                <h2>Manage club presidents</h2>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <th>
+                        <tr>
+                            <th>Club name</th>
+                            <th>President</th>
+                            <th>Student ID</th>
+                            <th>Actions</th>
+                        </tr>
+                    </th>
+                    <tbody id="presidents-table"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="content-card" id="events">
+            <div class="card-heading">
+                <h2>Manage events</h2>
+                <button class="primary-button" id="create-event" type="button">+ Create event</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <th>
+                        <tr>
+                            <th>Event</th>
+                            <th>Organizing club</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </th>
+                    <tbody id="events-table"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="content-card" id="posts">
+            <div class="card-heading">
+                <h2>Public post moderation</h2>
+                <span class="pending-badge" id="pending-badge">2 pending</span>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <th>
+                        <tr>
+                            <th>Post</th>
+                            <th>Club</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </th>
+                    <tbody id="posts-table"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer class="page-footer">
+            <span>AIUB Campus Club Management System</span>
+            <span>Admin workspace</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

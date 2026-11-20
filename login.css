@@ -1,0 +1,174 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.navbar {
+    background-color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e9f0;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-area img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo-area h3 {
+    color: #1c416e;
+    font-size: 17px;
+}
+
+.logo-area p {
+    color: #8792a2;
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+.navbar a {
+    color: #3974b9;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 15px;
+    
+}
+
+.box {
+    background-color: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    border: 1px solid #e5e9f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    box-shadow:0px 2px 6px black;
+}
+
+.h2 {
+    color: #244a76;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #8792a2;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 22px;
+}
+
+
+
+form label {
+    display: block;
+    color: #263548;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+form input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #dce3ed;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 17px;
+    font-size: 12px;
+}
+
+form input:focus {
+    border-color: #244a76;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    color: #3974b9;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1c416e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+form button:hover {
+    background-color: #153353;
+}
+
+
+
+.role-info {
+    background-color: #f4f6fa;
+    color: #8792a2;
+    font-size: 11px;
+    line-height: 17px;
+    padding: 12px;
+    margin-top: 18px;
+    border-radius: 5px;
+}
+
+
+
+.help-text {
+    color: #8792a2;
+    font-size: 11px;
+    margin-top: 18px;
+}
+
+
+
+footer {
+    text-align: center;
+    color: #8792a2;
+    font-size: 11px;
+    padding: 20px;
+}
+
+
+
+

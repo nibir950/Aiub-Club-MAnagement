@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club President Dashboard</title>
+    <link rel="stylesheet" href="president.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <aside class="side-bar">
+        <h1>Club President Portal</h1>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#clubinfo">Club Information</a>
+            <a href="#managemembers">Manage Members</a>
+            <a href="#recruitmentnotice">Recruitment Notice</a>
+            <a href="#announcement">Announcement</a>
+            <a href="#publicPostsList">Club Post</a>
+            <a href="#events">Events</a>
+            <a href="#logout">Logout</a>
+        </nav>
+    </aside>
+
+    <main>
+
+       
+        <div id="dashboard">
+
+            <h2>Dashboard</h2>
+            <p>Welcome to your club president dashboard!</p>
+
+            <div id="header">
+
+                <div id="card1">
+                    <h3>Total Members</h3>
+                    <p class="Number">150</p>
+                    <p>18 joined this month</p>
+                </div>
+
+                <div id="card2">
+                    <h3>Active Recruitment Notices</h3>
+                    <p class="Number">2</p>
+                    <p>50 applicants</p>
+                </div>
+
+                <div id="card3">
+                    <h3>Public Post</h3>
+                    <p class="Number">10</p>
+                    <p>5 published this month</p>
+                </div>
+
+                <div id="card4">
+                    <h3>Upcoming Events</h3>
+                    <p class="Number">3</p>
+                    <p>2 events this month</p>
+                </div>
+
+            </div>
+
+            
+            <div id="recentUsers">
+
+                <h3>Recent Users</h3>
+
+                <table border="2">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Active Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Habib Hasan</td>
+                            <td>24-56222-1@aiub.edu</td>
+                            <td>Member</td>
+                            <td>Active</td>
+                        </tr>
+
+                        <tr>
+                            <td>Walid Ullah</td>
+                            <td>24-53333-1@aiub.edu</td>
+                            <td>Member</td>
+                            <td>Active</td>
+                        </tr>
+
+                        <tr>
+                            <td>Tariqul Islam</td>
+                            <td>23-45687-1@aiub.edu</td>
+                            <td>Member</td>
+                            <td>Inactive</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+           
+            <div id="publishClub">
+
+                <h3>Publish Post</h3>
+
+                <div class="publishpostcard" data-target="recruitmentnotice">
+                    Create Recruitment Notice
+                </div>
+
+                <div class="publishpostcard" data-target="announcement">
+                    Create Announcement
+                </div>
+
+                <div class="publishpostcard" data-target="clubpost">
+                    Create Post
+                </div>
+
+                <div class="publishpostcard" data-target="events">
+                    Create Event
+                </div>
+
+            </div>
+
+            
+            <div id="announcement">
+
+                <div id="upcomingClubEvents">
+
+                    <h2>Upcoming Club Events</h2>
+
+                    <ul id="eventList">
+                        <li>AIUB Programming Contest - 25 Dec 2026</li>
+                        <li>AIUB Tech Workshop - 10 Jan 2027</li>
+                        <li>AIUB Hackathon - 15 Feb 2027</li>
+                    </ul>
+
+                </div>
+
+                <div id="activeRecruitment">
+
+                    <h2>Active Recruitment Notices</h2>
+
+                    <div id="recruitmentList">
+
+                        <div class="recruitment-notice">
+                            <h3>AIUB Computer Club Recruitment</h3>
+                            <p>We are looking for passionate students.</p>
+                            <p>Deadline: 30 Nov 2026</p>
+                        </div>
+
+                        <div class="recruitment-notice">
+                            <h3>AIUB Tech Workshop Recruitment</h3>
+                            <p>Join our tech workshop and enhance your skills.</p>
+                            <p>Deadline: 15 Dec 2026</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        
+        <div id="clubinfo">
+
+            <h1>My Club</h1>
+            <p>View your club profile and information.</p>
+
+            <div id="club-profile">
+
+                <h2>AIUB Computer Club</h2>
+
+                <p>Category: Technology</p>
+                <p>Established: 2010</p>
+                <p>Email: computerclub@aiub.edu</p>
+                <p>Location: AIUB Campus</p>
+
+                <p>
+                    Status:
+                    <span class="active">Active</span>
+                </p>
+
+            </div>
+
+            <div id="about-club">
+
+                <h2>About Our Club</h2>
+
+                <p>
+                    AIUB Computer Club is a student organization that focuses on
+                    programming, technology, innovation and skill development.
+                    Our club provides opportunities for students to learn new
+                    technologies, participate in competitions and work together
+                    on projects.
+                </p>
+
+            </div>
+
+            <div id="mission-vision">
+
+                <div class="mission">
+
+                    <h2>Mission of Computer Club</h2>
+
+                    <p>
+                        To develop students' technical skills, creativity and
+                        problem-solving abilities through different activities
+                        and workshops.
+                    </p>
+
+                </div>
+
+                <div class="vision">
+
+                    <h2>Our Vision</h2>
+
+                    <p>
+                        To build a community of skilled, innovative and
+                        technology-oriented students.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div id="objectives">
+
+                <h2>Our Objectives</h2>
+
+                <ul>
+                    <li>Improve programming skills.</li>
+                    <li>Organize technical workshops.</li>
+                    <li>Encourage teamwork and collaboration.</li>
+                    <li>Participate in programming competitions.</li>
+                    <li>Develop real-world projects.</li>
+                </ul>
+
+            </div>
+
+            <div id="leadership">
+
+                <h2>Club Leadership Team</h2>
+
+                <table border="2">
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Nibir Biswas</td>
+                            <td>President</td>
+                            <td>24-56282-1@aiub.edu</td>
+                        </tr>
+
+                        <tr>
+                            <td>Abdullah Ahmed</td>
+                            <td>Vice President</td>
+                            <td>23-44532-1@aiub.edu</td>
+                        </tr>
+
+                        <tr>
+                            <td>Walid Ahmed</td>
+                            <td>General Secretary</td>
+                            <td>22-45678-1@aiub.edu</td>
+                        </tr>
+
+                        <tr>
+                            <td>Asif Ahmed</td>
+                            <td>Treasurer</td>
+                            <td>21-34567-1@aiub.edu</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div id="club-rules">
+
+                <h2>Rules & Regulations</h2>
+
+                <ul>
+                    <li>All members must follow club rules.</li>
+                    <li>Members should attend scheduled meetings.</li>
+                    <li>Respect all club members.</li>
+                    <li>Participate in club activities.</li>
+                    <li>Maintain discipline during events.</li>
+                </ul>
+
+            </div>
+
+            <div id="club-gallery">
+
+                <h2>Club Gallery</h2>
+
+                <div class="gallery-container">
+
+                    <div class="gallery-card">
+                        <img src="workshop.jpg" alt="Club Workshop">
+                        <p>Programming Workshop</p>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="competetion.jpg" alt="Programming Competition">
+                        <p>Programming Competition</p>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="events.jpg" alt="Club Event">
+                        <p>Club Event</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MANAGE MEMBERS -->
+        <div id="managemembers">
+
+            <h2>Pending Membership Requests</h2>
+
+            <table id="pendingRequestsTable" border="2">
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>Email</th>
+                        <th>Request Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Rahim Ahmed</td>
+                        <td>25-12345-1</td>
+                        <td>rahim@aiub.edu</td>
+                        <td>18 Nov 2026</td>
+                        <td>
+                            <button type="button" class="approve_btn">Approve</button>
+                            <button type="button" class="reject_btn">Reject</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Karim Hasan</td>
+                        <td>25-23456-1</td>
+                        <td>karim@aiub.edu</td>
+                        <td>19 Nov 2026</td>
+                        <td>
+                            <button type="button" class="approve_btn">Approve</button>
+                            <button type="button" class="reject_btn">Reject</button>
+                        </td>
+                    </tr>
+                      <tr>
+                        <td>Alim Ahmed</td>
+                        <td>22-12345-1</td>
+                        <td>alim@aiub.edu</td>
+                        <td>18 Nov 2026</td>
+                        <td>
+                            <button type="button" class="approve_btn">Approve</button>
+                            <button type="button" class="reject_btn">Reject</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+            <h2>Approved Members</h2>
+
+            <table id="membersTable" border="2">
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- RECRUITMENT NOTICE -->
+        <div id="recruitmentnotice">
+
+            <h2>Recruitment Notice</h2>
+
+            <form id="recruitmentForm" action="#" method="post">
+
+                <label for="noticeTitle">Notice Title:</label>
+                <input
+                    type="text"
+                    id="noticeTitle"
+                    name="noticeTitle"
+                    required
+                >
+
+                <label for="noticeDescription">Notice Description:</label>
+
+                <textarea
+                    id="noticeDescription"
+                    name="noticeDescription"
+                    required
+                ></textarea>
+
+                <label for="deadline">Deadline:</label>
+
+                <input
+                    type="date"
+                    id="deadline"
+                    name="deadline"
+                    required
+                >
+
+                <label for="applydetails">How to Apply:</label>
+
+                <textarea
+                    id="applydetails"
+                    name="applydetails"
+                    required
+                ></textarea>
+
+                <button type="submit">Publish Notice</button>
+
+            </form>
+
+        </div>
+
+
+        <!-- CLUB POST -->
+        <div id="clubpost">
+
+            <h2>Club Post</h2>
+
+            <form id="postForm" action="#" method="post">
+
+                <label for="postTitle">Post Title:</label>
+
+                <input
+                    type="text"
+                    id="postTitle"
+                    name="postTitle"
+                    required
+                >
+
+                <label for="postContent">Post Content:</label>
+
+                <textarea
+                    id="postContent"
+                    name="postContent"
+                    required
+                ></textarea>
+
+                <button type="submit">Publish Post</button>
+
+            </form>
+
+        </div>
+
+
+        
+        <div id="events">
+
+            <h2>Events</h2>
+
+            <form id="eventForm" action="#" method="post">
+
+                <label for="eventTitle">Event Title:</label>
+
+                <input
+                    type="text"
+                    id="eventTitle"
+                    name="eventTitle"
+                    required
+                >
+
+                <label for="eventDescription">Event Description:</label>
+
+                <textarea
+                    id="eventDescription"
+                    name="eventDescription"
+                    required
+                ></textarea>
+
+                <label for="eventDate">Event Date:</label>
+
+                <input
+                    type="date"
+                    id="eventDate"
+                    name="eventDate"
+                    required
+                >
+
+                <label for="eventLocation">Event Location:</label>
+
+                <input
+                    type="text"
+                    id="eventLocation"
+                    name="eventLocation"
+                    required
+                >
+
+                <button type="submit">Publish Event</button>
+
+            </form>
+
+        </div>
+
+        
+        <div id="publicPostsList">
+            <h1>Public Post</h1>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Club President Dashboard. All rights reserved.</p>
+    </footer>
+
+    <script src="president.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Member Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>AIUB CLUBS</h2>
+            <p>Member Portal</p>
+        </div>
+
+        <div class="menu">
+            <button class="nav-button active" data-page="dashboardPage">Dashboard</button>
+            <button class="nav-button" data-page="eventsPage">Events</button>
+            <button class="nav-button" data-page="postsPage">Posts</button>
+            <button class="nav-button" data-page="membershipPage">My Memberships</button>
+            <button class="nav-button" data-page="profilePage">My Profile</button>
+        </div>
+
+        <div class="member-box">
+            <div class="avatar" id="sideAvatar">A</div>
+            <div>
+                <strong id="sideName">Asif Sezan</strong>
+                <p id="sideEmail">member@aiub.edu</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="topbar">
+            <div>
+                Member Dashboard
+                <span class="separator">/</span>
+                <strong id="pageName">Dashboard</strong>
+            </div>
+            <div class="demo-label">Demo Member</div>
+        </div>
+
+        <div id="dashboardPage" class="page active-page">
+
+            <div class="heading">
+                <p>WELCOME BACK</p>
+                <h1 id="welcomeName">Asif Sezan</h1>
+                <span>Here is an overview of your club activities.</span>
+            </div>
+
+            <div class="club-selector">
+                <div>
+                    <small>CURRENT VIEW</small>
+                    <h3 id="selectedClubName">All My Clubs</h3>
+                </div>
+                <select id="clubSelector">
+                    <option value="all">All My Clubs</option>
+                </select>
+            </div>
+            <h2 class="title">My Clubs</h2>
+            <div id="myClubs" class="club-grid"></div>
+
+            <div class="stats">
+
+                <div class="stat-card">
+                    <p>Upcoming Events</p>
+                    <h2 id="eventCount">0</h2>
+                    <span>From selected clubs</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>My Memberships</p>
+                    <h2 id="membershipCount">0</h2>
+                    <span>Approved memberships</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>Visible Posts</p>
+                    <h2 id="postCount">0</h2>
+                    <span>Published posts</span>
+                </div>
+
+            </div>
+
+            <div class="title-row">
+                <h2 class="title">Upcoming Events</h2>
+                <button class="link-button" data-page="eventsPage">View All</button>
+            </div>
+
+            <div id="dashboardEvents" class="event-grid"></div>
+
+            <div class="bottom-grid">
+                <div>
+                    <div class="title-row">
+                        <h2 class="title">Recent Posts</h2>
+                        <button class="link-button" data-page="postsPage">View All</button>
+                    </div>
+                    <div id="dashboardPosts" class="list-card"></div>
+                </div>
+
+                <div>
+                    <div class="title-row">
+                        <h2 class="title">My Memberships</h2>
+                        <button class="link-button" data-page="membershipPage">View All</button>
+                    </div>
+                    <div id="dashboardMemberships" class="list-card"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="eventsPage" class="page">
+            <div class="heading">
+                <p>EVENTS</p>
+                <h1>Club Events</h1>
+                <span>Create, update or delete events for your clubs.</span>
+            </div>
+
+            <div class="event-form">
+                <h2 id="eventFormTitle">Create Event</h2>
+                <div class="form-grid">
+                    <div>
+                        <label>Event Name</label>
+                        <input id="eventName" placeholder="Enter event name">
+                    </div>
+
+                    <div>
+                        <label>Club</label>
+                        <select id="eventFormClub"></select>
+                    </div>
+
+                    <div>
+                        <label>Date</label>
+                        <input id="eventDate" type="datetime-local">
+                    </div>
+
+                    <div>
+                        <label>Venue</label>
+                        <input id="eventVenue" placeholder="Enter venue">
+                    </div>
+
+                </div>
+
+                <label>Description</label>
+                <textarea id="eventDescription" placeholder="Enter event description"></textarea>
+
+                <div class="form-actions">
+                    <button id="saveEventButton" class="primary-button">Create Event</button>
+                    <button id="cancelEventButton" class="secondary-button">Cancel</button>
+                </div>
+
+                <p id="eventMessage" class="message"></p>
+            </div>
+
+            <div class="filter">
+                <label>Show events from:</label>
+                <select id="eventClubSelector">
+                    <option value="all">All My Clubs</option>
+                </select>
+            </div>
+
+            <div id="eventsContainer" class="event-grid"></div>
+        </div>
+
+        <div id="postsPage" class="page">
+            <div class="heading">
+                <p>POSTS</p>
+                <h1>Announcements & Posts</h1>
+                <span>Important updates and posts available to you.</span>
+            </div>
+
+            <div class="filter">
+                <label>Show posts from:</label>
+                <select id="postClubSelector">
+                    <option value="all">All My Clubs</option>
+                </select>
+                <button class="filter-button active" data-filter="all">All</button>
+                <button class="filter-button" data-filter="public">Public</button>
+                <button class="filter-button" data-filter="club">Club Only</button>
+            </div>
+            <div id="postsContainer" class="post-grid"></div>
+        </div>
+
+        <div id="membershipPage" class="page">
+            <div class="heading">
+                <p>MEMBERSHIPS</p>
+                <h1>My Club Memberships</h1>
+                <span>All approved memberships connected to his demo member.</span>
+            </div>
+
+            <div class="table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Membership ID</th>
+                            <th>Club</th>
+                            <th>Join Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="membershipTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="profilePage" class="page">
+            <div class="heading">
+                <p>PROFILE</p>
+                <h1>My Profile</h1>
+                <span>Demo member info</span>
+            </div>
+
+            <div class="profile-card">
+                <div class="profile-top">
+                    <div class="big-avatar" id="profileAvatar">A</div>
+                    <div>
+                        <h2 id="profileHeading">Asif Sezan</h2>
+                        <p>Member</p>
+                    </div>
+                </div>
+
+                <div class="profile-info">
+                    <div>
+                        <label>Full Name</label>
+                        <input id="profileName" value="Asif Sezan" readonly>
+                    </div>
+
+                    <div>
+                        <label>Email</label>
+                        <input id="profileEmail" value="member@aiub.edu" readonly>
+                    </div>
+
+                    <div>
+                        <label>Role</label>
+                        <input value="Member" readonly>
+                    </div>
+
+                    <div>
+                        <label>Account Status</label>
+                        <input value="Active" readonly>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <button id="editProfileButton" class="primary-button">Edit Profile</button>
+                    <button id="saveProfileButton" class="primary-button hidden">Save Changes</button>
+                    <button id="cancelProfileButton" class="secondary-button hidden">Cancel</button>
+                </div>
+
+                <p id="profileMessage" class="message"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="eventModal" class="modal">
+    <div class="modal-box">
+        <button id="closeModal" class="close-button">&times;</button>
+
+        <p class="modal-label">EVENT DETAILS</p>
+        <h2 id="modalName"></h2>
+        <p id="modalClub" class="modal-muted"></p>
+        <p id="modalDate"></p>
+        <p id="modalVenue"></p>
+
+        <hr>
+        <p id="modalDescription"></p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
